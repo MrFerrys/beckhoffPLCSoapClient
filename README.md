@@ -66,5 +66,5 @@ This project is licensed under the MiT License - see the LICENSE file for detail
 
 ## Acknowledgments
 
-Finite State Machine:
+TcAdsWebService
 * [TcAdsWebService.js](https://infosys.beckhoff.com/english.php?content=../content/1033/tcadswebservice.js/html/intro.html&id=)
