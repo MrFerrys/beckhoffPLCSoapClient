@@ -1,0 +1,19 @@
+{
+    "name": "mrferrys/beckhoffplcsoapclient",
+    "description": "SoapClient to communicate with BeckHoff PLC",
+    "type": "library",
+    "require": {
+      "php": ">=5.0.0"
+    },
+    "license": "MiT",
+    "authors": [
+      {
+        "name": "Ferrys",
+        "email": "mymail@mail.com"
+      }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+      "classmap": ["src/"]
+    }
+  }

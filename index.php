@@ -1,25 +1,21 @@
-# finitestatemachine
-SoapClient to communicate with BeckHoff PLC. Library made in PHP based on TcAdsWebService JavaScript Library. 
+<?php
+/**
+ * LIB REST Countries 
+ */
+//EXECUTION TIME
+ini_set('max_execution_time', '0');
 
-## Description
+//ERROR REPORTING
+//error_reporting(0);
+error_reporting(E_ALL);
 
-SoapClient to communicate with BeckHoff PLC. Library made in PHP based on TcAdsWebService JavaScript Library. 
+//LIBS
+use mrferrys\beckhoffplcsoapclient\plcHandler as plcHandler;
 
-## Getting Started
-
-### Dependencies
-
-* PHP >= 5
-
-### Installation
-composer require mrferrys/beckhoffplcsoapclient
-
-### Usage
-
-* How to use it.
-```
-	use mrferrys\beckhoffplcsoapclient\plcHandler as plcHandler;
-
+/**                                                                        
+ *  MAIN
+ */
+try{
 	$pHandler= new plcHandler(
         "http://172.16.23.102/TcAdsWebService/TcAdsWebService.dll",
         "http://172.16.23.102/TcAdsWebService/TcAdsWebService.WSDL",
@@ -50,21 +46,9 @@ composer require mrferrys/beckhoffplcsoapclient
     foreach($pHandler->symbolTable as $k=>$v){
         echo "$k \n";
     }
-```
-## Authors
+	
+}catch(\Exception $e){
+    echo $e->getMessage();
+}
+?>
 
-MrFerrys  
-
-## Version History
-
-* 1.0.0
-    * Initial Release (X.Y.Z MAJOR.MINOR.PATCH)
-
-## License
-
-This project is licensed under the MiT License - see the LICENSE file for details
-
-## Acknowledgments
-
-Finite State Machine:
-* [TcAdsWebService.js](https://infosys.beckhoff.com/english.php?content=../content/1033/tcadswebservice.js/html/intro.html&id=)
